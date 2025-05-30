@@ -1,0 +1,116 @@
+---
+title: "Solspot – Solar-Powered Smart Vehicle for Efficient Parallel Parking"
+description: "A deep dive into how I built Solspot, a smart solar vehicle prototype using ESP32s, 360° wheels, and a web-based control system."
+date: "2025-05-29"
+author: "Arush"
+tags: ["IoT", "ESP32", "smart-vehicle", "solar-energy", "arduino", "web-interface"]
+readTime: "6 min read"
+---
+
+# Solspot – Solar-Powered Smart Vehicle for Efficient Parallel Parking
+
+Parallel parking in congested urban areas has always been a challenge—and that’s where **Solspot** comes in. This blog post is a full walkthrough of how I designed and built a **solar-powered smart vehicle prototype** with **360° wheels**, controlled wirelessly using **ESP32 microcontrollers** and a **mobile-responsive web interface**.
+
+## 💡 Project Overview
+
+**Solspot** is a prototype electric vehicle that can be **manually or autonomously parallel parked**, powered by **solar energy**, and maneuvered in any direction thanks to 360° rotating wheels.
+
+Key concepts:
+- Solar energy for sustainable operation 🔋
+- Dual ESP32 setup for transmitter and receiver 📶
+- Web interface control (no mobile app required) 🌐
+- Compact, efficient movement with omnidirectional wheels 🔄
+
+## ✅ Features
+
+- 🔋 **Self-sustaining with a solar panel and lithium battery**
+- 🌐 **WiFi-based web interface (no router needed)**
+- 🔄 **360° movement for tight-space parking**
+- 🛠️ **Dual ESP32 microcontrollers for signal transmission and execution**
+- 🔌 **UBEC for stable voltage regulation**
+- 📱 **Mobile-friendly control dashboard**
+
+
+### Hardware Stack
+
+| Component          | Description                          |
+|-------------------|--------------------------------------|
+| ESP32 (x2)         | Microcontroller for control & signal |
+| L298N              | Motor Driver                         |
+| UBEC               | Voltage Regulator                    |
+| Solar Panel        | Renewable Power Source               |
+| Lithium Battery    | Power Storage                        |
+| 360° Wheels        | Precision Movement                   |
+
+## 🔌 Installation Guide
+
+### Hardware Setup
+
+1. Assemble chassis, attach motors and wheels.
+2. Connect the L298N motor driver to ESP32 (receiver).
+3. Wire the solar panel and battery through the UBEC.
+4. Mount both ESP32s and ensure safe cable management.
+
+### Software Setup
+
+1. Open Arduino IDE, install the **ESP32 board manager**.
+2. Upload the **transmitter** and **receiver** code to the respective ESP32 boards.
+3. Install required libraries like:
+   - `ESPAsyncWebServer`
+   - `WiFi.h`
+4. Power on the receiver ESP32 to start broadcasting its WiFi network.
+
+### WiFi Interface
+
+- Connect your smartphone or laptop to the ESP32 hotspot.
+- Access the control dashboard via browser.
+- Use the directional buttons to move and park the vehicle.
+
+## 🛠️ How It Works
+
+- The **transmitter ESP32** hosts a web UI.
+- Commands from the dashboard are sent over WiFi to the **receiver ESP32**.
+- The receiver processes the command and actuates the motors via **L298N**.
+- The **solar panel** continuously charges the battery while in operation.
+
+## 🧪 Circuit Diagram
+
+![Solspot Circuit Diagram](/solspot-circuit.jpg)
+
+> A full schematic showing ESP32 communication, motor driver, 360° wheels, and the regulated solar power supply. Matching this setup precisely helps avoid voltage-related issues.
+
+## 🚧 Challenges Faced
+
+- **Voltage Instability**: The ESP32s were sensitive to direct battery output. I resolved this using a **UBEC** for smooth 5V regulation.
+- **Library Conflicts**: `ESPAsyncWebServer` required specific versions to work properly with ESP32.
+- **WiFi Drops**: High request frequency sometimes caused crashes. I optimized control timing using `millis()` instead of `delay()`.
+- **Component Sourcing**: Finding a solar panel with a suitable form factor and current output was tricky.
+
+## 🎥 Demo Video
+
+<div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden" }}>
+  <iframe 
+    src="https://www.youtube.com/embed/dalX-nPmvmk" 
+    title="Solspot Project Demo"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowFullScreen
+    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+  ></iframe>
+</div>
+
+## 🧑‍💻 Author & Credits
+
+This project was researched, designed, and developed by **Arush**.  
+If you'd like to collaborate or need help building your own version of Solspot, feel free to reach out.
+
+## 📜 License
+
+Solspot is licensed under the **MIT License**.  
+You’re welcome to fork, build on top of, or improve the idea for your own use cases.
+
+---
+
+Thanks for reading! If you enjoyed this project or have questions, drop a comment or connect with me on GitHub. 🚀
+
+

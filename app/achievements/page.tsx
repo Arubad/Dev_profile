@@ -40,10 +40,10 @@ export default function AchievementsPage() {
     {
       icon: <Award className="w-8 h-8" />,
       title: "School Olympics Champion Boy",
-      description: "Prestigious Award Given to outstanding performer in School Olympics",
+      deschttps: "Prestigious Award Given to outstanding performer in School Olympics",
       date: "2018",
       category: "Award",
-      video: "/olympics-trophy.mp4", // optional video path
+      youtubeUrl:"https://www.youtube.com/embed/QtUKaFm8_gY", // optional video path
     },
     {
       icon: <Book className="w-8 h-8" />,
@@ -61,13 +61,13 @@ export default function AchievementsPage() {
       name: "Swimming",
       description: "Swam Multiple State and National Level Tournaments",
       icon: "🎬",
-      video: "/swimming.mp4",
+      youtubeUrl: "https://www.youtube.com/embed/kEXSV9y9MNc",
     },
     {
       name: "Badminton",
       description: "Frequent Badminton Player",
       icon: "🏸",
-      video: "/badminton.mp4",
+      youtubeUrl: "https://www.youtube.com/embed/qpDOtooKG14",
     },
     {
       name: "Reading",
@@ -146,12 +146,19 @@ export default function AchievementsPage() {
                       className="rounded-lg object-cover w-full h-auto"
                     />
                   )}
-                  {achievement.video && (
-                    <video controls className="rounded-lg w-full mt-2">
-                      <source src={achievement.video} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  )}
+                  {achievement.youtubeUrl && (
+  <div className="aspect-video mt-2">
+    <iframe
+      className="w-full h-full rounded-lg"
+      src={achievement.youtubeUrl}
+      title={achievement.title}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    />
+  </div>
+)}
+
                 </CardContent>
               </Card>
             ))}
@@ -181,12 +188,19 @@ export default function AchievementsPage() {
                       className="rounded-lg object-cover w-full h-auto"
                     />
                   )}
-                  {hobby.video && (
-                    <video controls className="rounded-lg w-full mt-2">
-                      <source src={hobby.video} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  )}
+                  {hobby.youtubeUrl && (
+  <div className="aspect-video mt-2">
+    <iframe
+      className="w-full h-full rounded-lg"
+      src={hobby.youtubeUrl}
+      title={hobby.name}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    />
+  </div>
+)}
+
                 </CardContent>
               </Card>
             ))}
