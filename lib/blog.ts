@@ -16,6 +16,7 @@ export interface BlogPost {
   tags: string[]
   readTime: string
   content: string
+  hashnodeUrl?: string
 }
 
 export async function getAllPosts(): Promise<BlogPost[]> {
@@ -86,6 +87,7 @@ Thanks for reading, and I hope you find the content valuable!
             tags: data.tags || [],
             readTime: data.readTime || "5 min read",
             content: processedContent.toString(),
+            hashnodeUrl: data.hashnodeUrl || "",
           }
         }),
     )
@@ -118,6 +120,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       tags: data.tags || [],
       readTime: data.readTime || "5 min read",
       content: processedContent.toString(),
+      hashnodeUrl: data.hashnodeUrl || "",
     }
   } catch (error) {
     console.error("Error reading blog post:", error)

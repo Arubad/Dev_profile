@@ -44,9 +44,15 @@ export function BlogCard({ post }: BlogCardProps) {
               {post.readTime}
             </div>
           </div>
-          <Button onClick={() => setIsOpen(true)} className="w-full">
-            Read More
-          </Button>
+          <a
+  href={post.hashnodeUrl || `/blog/${post.slug}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full"
+>
+  <Button className="w-full">Read More</Button>
+</a>
+
         </CardContent>
       </Card>
 
