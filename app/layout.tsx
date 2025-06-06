@@ -11,7 +11,9 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Arush Badhe - Portfolio",
   description: "AIML Developer & Tech Enthusiast",
-    generator: 'v0.dev'
+  icons: {
+    icon: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
