@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { TestimonialsSection } from "@/components/testimonials-section"
+import { ParticlesBackground } from "@/components/ParticlesBackground"
 
 export default function HomePage() {
   const skills = {
@@ -24,7 +25,8 @@ export default function HomePage() {
   const hobbies = ["Photography", "Swimming", "Badminton", "Reading", "Music"]
 
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen overflow-hidden">
+      <ParticlesBackground />
       {/* Hero Section */}
       <section className="py-20 px-4 text-center bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="max-w-4xl mx-auto">
@@ -75,7 +77,7 @@ export default function HomePage() {
     <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">About Me</h2>
     <div className="grid md:grid-cols-2 gap-12 items-center">
       {/* Left Column - Journey */}
-      <div>
+      <div className="font-bold bg-background/80 backdrop-blur-md border border-border rounded-2xl shadow-lg max-w-3xl p-8">
         <h3 className="text-2xl font-semibold mb-6 text-primary">My Journey</h3>
         <p className="text-muted-foreground mb-6 leading-relaxed">
           I’m an aspiring AI & Machine Learning engineer currently in my second year, pursuing a dual degree — BS in Data Sciences and Engineering at IIT Madras and BTech in Information Technology at VIT Pune. My passion lies at the intersection of Computer Vision and Object Detection, where I enjoy solving complex real-world problems by teaching machines to see and understand the world.

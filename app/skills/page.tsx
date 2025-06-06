@@ -1,162 +1,160 @@
 "use client"
 
 import {
-  Code,
-  Database,
-  Cloud,
-  Wrench,
-  Smartphone,
-  Globe,
-} from "lucide-react"
+  Badge
+} from "@/components/ui/badge"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
+  CardDescription
 } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "@/components/ui/dialog"
+import {
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent
+} from "@/components/ui/tabs"
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogTitle
+} from "@/components/ui/dialog"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from "@/components/ui/tooltip"
+
+const skillCategories = [
+  {
+    id: "languages",
+    name: "Languages",
+    skills: ["JavaScript", "Python", "HTML", "SQL", "C++", "C", "Java"],
+  },
+  {
+    id: "frameworks",
+    name: "Frameworks",
+    skills: [
+      "React", "Next.js", "Node.js", "Express", "Django", "Flask",
+      "TensorFlow", "Keras", "PyTorch", "OpenCV", "scikit-learn",
+      "MediaPipe", "YOLO", "Hugging Face"
+    ],
+  },
+  {
+    id: "tools",
+    name: "Tools & Platforms",
+    skills: [
+      "Git", "Docker", "GCP", "Firebase", "MongoDB", "PostgreSQL",
+      "Pandas", "NumPy", "Matplotlib", "Seaborn", "Google Colab"
+    ],
+  },
+]
+
+const skillDescriptions: Record<string, string> = {
+  "JavaScript": "Versatile scripting language for web development.",
+  "Python": "Popular language for automation, AI, and data science.",
+  "HTML": "Standard markup language for creating web pages.",
+  "SQL": "Used for managing and querying relational databases.",
+  "C++": "High-performance language used in systems and game development.",
+  "C": "Procedural language used in embedded and systems programming.",
+  "Java": "Widely-used object-oriented language, known for portability.",
+  "React": "JavaScript library for building user interfaces.",
+  "Next.js": "React framework with server-side rendering and routing.",
+  "Node.js": "JavaScript runtime for backend/server-side development.",
+  "Express": "Minimalist backend framework for Node.js.",
+  "Django": "Python web framework for rapid, secure development.",
+  "Flask": "Lightweight Python web micro-framework.",
+  "TensorFlow": "Google’s library for building deep learning models.",
+  "Keras": "High-level neural networks API, often used with TensorFlow.",
+  "PyTorch": "Facebook’s deep learning framework with dynamic computation.",
+  "OpenCV": "Library for real-time computer vision.",
+  "scikit-learn": "Machine learning library for Python.",
+  "MediaPipe": "Google’s framework for building perception pipelines.",
+  "YOLO": "Real-time object detection system.",
+  "Hugging Face": "Popular platform for NLP and transformer models.",
+  "Git": "Version control system to track code changes.",
+  "Docker": "Containerization platform for deploying applications.",
+  "GCP": "Google Cloud Platform—cloud infrastructure services.",
+  "Firebase": "Google’s backend-as-a-service platform.",
+  "MongoDB": "NoSQL database with flexible schema.",
+  "PostgreSQL": "Advanced open-source relational database.",
+  "Pandas": "Data manipulation and analysis library in Python.",
+  "NumPy": "Numerical computing library for Python.",
+  "Matplotlib": "Plotting and graphing library for Python.",
+  "Seaborn": "Statistical data visualization on top of Matplotlib.",
+  "Google Colab": "Cloud-based Python notebook environment.",
+}
+
+const certifications = [
+  { title: "Introduction to Programming", image: "/Intro_to_programming.png" },
+  { title: "Pandas", image: "/pandas.jpg" },
+  { title: "Data Analysis with Excel", image: "/Data_analysis_with-excel.jpg" },
+  { title: "Advanced Excel", image: "/advanced_excel.jpg" },
+  { title: "Basic SQL", image: "/Hackerrank_sql_basic_certification.png" },
+  { title: "SEBI-Investor certification", image: "/SEBI_investor_certification.png" },
+  { title: "Building Responsive Websites", image: "/resp_webdes.jpg" },
+]
 
 export default function SkillsPage() {
-  const skillCategories = [
-    {
-      icon: <Code className="w-6 h-6" />,
-      title: "Programming Languages",
-      description: "Languages I use for development",
-      skills: [
-        "JavaScript",
-        "TypeScript",
-        "Python",
-        "Java",
-        "C++",
-        "HTML",
-        "SQL",
-        "C",
-      ],
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Frontend Frameworks",
-      description: "Modern frontend technologies",
-      skills: [
-        "React",
-        "Next.js",
-        "Vue.js",
-        "Angular",
-      ],
-    },
-    {
-      icon: <Database className="w-6 h-6" />,
-      title: "Backend & Databases",
-      description: "Server-side technologies and databases",
-      skills: [
-        "Node.js",
-        "Express.js",
-        "PostgreSQL",
-        "MongoDB",
-      ],
-    },
-    {
-      icon: <Cloud className="w-6 h-6" />,
-      title: "Cloud & DevOps",
-      description: "Cloud platforms and deployment tools",
-      skills: [
-        "Docker",
-        "Google Cloud",
-      ],
-    },
-    {
-      icon: <Wrench className="w-6 h-6" />,
-      title: "Tools & Platforms",
-      description: "Development tools and platforms",
-      skills: [
-        "Git",
-        "VS Code",
-        "Figma",
-        "Postman",
-        "Jira",
-      ],
-    },
-    {
-      icon: <Smartphone className="w-6 h-6" />,
-      title: "Mobile Development",
-      description: "Mobile app development technologies",
-      skills: [
-        "React Native",
-        "Android Development",
-      ],
-    },
-  ]
-
-  const certifications = [
-    {
-      title: "Introduction to Programming",
-      image: "/Intro_to_programming.png",
-    },
-    {
-      title: "Pandas",
-      image: "/pandas.jpg",
-    },
-    {
-      title: "Data Analysis with Excel",
-      image: "/Data_analysis_with-excel.jpg",
-    },
-    {
-      title: "Advanced Excel",
-      image: "/advanced_excel.jpg",
-    },
-    {
-      title: "Basic SQL",
-      image: "/Hackerrank_sql_basic_certification.png",
-    },
-    {
-      title: "SEBI-Investor certification",
-      image: "/SEBI_investor_certification.png",
-    },
-    {
-      title: "Building Responsive Websites",
-      image: "/resp_webdes.jpg",
-    },
-  ]
-
   return (
     <div className="min-h-screen py-20 px-4">
       <div className="max-w-6xl mx-auto">
+        {/* Heading */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Skills & Expertise</h1>
           <p className="text-xl text-muted-foreground">
-            A comprehensive overview of my technical skills and proficiency levels
+            A categorized overview of my technical and soft skills
           </p>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className="h-full">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-primary">{category.icon}</div>
-                </div>
-                <CardTitle className="text-xl">{category.title}</CardTitle>
-                <CardDescription>{category.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <Badge key={skillIndex} variant="outline" className="text-sm py-1 px-3">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        {/* Skills Tabs */}
+        <section className="mb-20">
+          <Tabs defaultValue="languages" className="max-w-4xl mx-auto">
+            <TabsList className="grid w-full grid-cols-3 mb-8">
+              {skillCategories.map((category) => (
+                <TabsTrigger key={category.id} value={category.id}>
+                  {category.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
+            {skillCategories.map((category) => (
+              <TabsContent key={category.id} value={category.id}>
+                <Card className="border-none shadow-lg">
+                  <CardContent className="pt-6">
+                    <div className="flex flex-wrap gap-3">
+                      {category.skills.map((skill) => (
+                        <TooltipProvider key={skill} delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <Badge
+                                variant="secondary"
+                                className="px-4 py-2 text-base rounded-full cursor-default"
+                              >
+                                {skill}
+                              </Badge>
+                            </TooltipTrigger>
+                            <TooltipContent className="max-w-xs text-sm">
+                              {skillDescriptions[skill] || "No description available."}
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            ))}
+          </Tabs>
+        </section>
 
         {/* Certifications */}
-        <section className="mb-16">
+        <section className="mb-20">
           <h2 className="text-3xl font-bold mb-8 text-center">Certifications</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
@@ -186,7 +184,7 @@ export default function SkillsPage() {
           </div>
         </section>
 
-        {/* Additional Skills */}
+        {/* Soft Skills */}
         <section>
           <h2 className="text-3xl font-bold mb-8 text-center">Additional Skills</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -212,22 +210,6 @@ export default function SkillsPage() {
                 </div>
               </CardContent>
             </Card>
-
-            {/*<Card>
-              <CardHeader>
-                <CardTitle>Methodologies</CardTitle>
-                <CardDescription>Development practices and methodologies</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {["Agile", "Scrum", "TDD", "CI/CD", "DevOps", "Microservices"].map((methodology) => (
-                    <Badge key={methodology} variant="outline" className="text-sm py-1 px-3">
-                      {methodology}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>*/}
           </div>
         </section>
       </div>

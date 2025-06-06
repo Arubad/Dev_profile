@@ -1,7 +1,9 @@
+import dynamic from "next/dynamic"
 import { ScrollText, Book, Trophy, Award, Star, Users, BookOpen, Mic, Newspaper } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
+import ClientAchievements from "@/components/ClientAchievementsWrapper"
 
 export default function AchievementsPage() {
   const achievements = [
@@ -11,61 +13,60 @@ export default function AchievementsPage() {
       description: "Solved over 100 Problems on Leetcode",
       date: "2025",
       category: "Coding Platform",
-      image: "/leetcode.jpg", // optional image path in public/
+      image: "/leetcode.jpg",
     },
     {
       icon: <Newspaper className="w-8 h-8" />,
       title: "Time Series Forecasting Course – IIT Kharagpur",
-      description: "Course of Time Series Forecasting cunducted by Analytics club of IIT-KGP",
+      description: "Course of Time Series Forecasting conducted by Analytics club of IIT-KGP",
       date: "2025",
       category: "Course",
-      image: "/ts-forecasting-certificate.png", // optional video path
+      image: "/ts-forecasting-certificate.png",
     },
     {
       icon: <ScrollText className="w-8 h-8" />,
       title: "IITM BS Data Science Foundation",
-      description: "Upon completion of Foundation Program, Covering Mathematics, Statistics, Computer Thinking, Professional English and Python",
+      description: "Upon completion of Foundation Program, covering Mathematics, Statistics, Computational Thinking, and Python",
       date: "2024",
       category: "Certificate",
-      image: "/iitm-certificate.png", // optional video path
+      image: "/iitm-certificate.png",
     },
     {
       icon: <Book className="w-8 h-8" />,
       title: "Student of M-Prakash Institute",
-      description: "Highly Selective competitive coaching class for IIT JEE ",
+      description: "Highly selective competitive coaching class for IIT JEE",
       date: "2022",
       category: "Selection",
-      image: "/MPI.jpg", // optional video path
+      image: "/MPI.jpg",
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "School Olympics Champion Boy",
-      deschttps: "Prestigious Award Given to outstanding performer in School Olympics",
+      description: "Prestigious award given to the outstanding performer in School Olympics",
       date: "2018",
       category: "Award",
-      youtubeUrl:"https://www.youtube.com/embed/QtUKaFm8_gY", // optional video path
+      youtubeUrl: "https://www.youtube.com/embed/QtUKaFm8_gY",
     },
     {
       icon: <Book className="w-8 h-8" />,
       title: "Social Welfare Achievement",
-      description: "Recognized for contribution to social welfare activities ",
+      description: "Recognized for contribution to social welfare activities",
       date: "2024",
       category: "Social Welfare",
-      image: "/sfa.png", // optional video path
-    },//...more acheivements
-    
+      image: "/sfa.png",
+    },
   ]
 
   const hobbies = [
     {
       name: "Swimming",
-      description: "Swam Multiple State and National Level Tournaments",
-      icon: "🎬",
+      description: "Swam in multiple state and national-level tournaments",
+      icon: "🏊",
       youtubeUrl: "https://www.youtube.com/embed/kEXSV9y9MNc",
     },
     {
       name: "Badminton",
-      description: "Frequent Badminton Player",
+      description: "Frequent badminton player",
       icon: "🏸",
       youtubeUrl: "https://www.youtube.com/embed/qpDOtooKG14",
     },
@@ -79,13 +80,6 @@ export default function AchievementsPage() {
       description: "Passionate about international cuisine and experimenting with new recipes",
       icon: "👨‍🍳",
     },
-    // ...more hobbies
-  ]
-
-  const stats = [
-    { label: "Projects Completed", value: "10+" },
-    { label: "Leetcode Problems", value: "100+" },
-    { label: "Articles Published", value: "2" },
   ]
 
   return (
@@ -99,19 +93,7 @@ export default function AchievementsPage() {
         </div>
 
         {/* Stats Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">By the Numbers</h2>
-          <div className={`grid grid-cols-1 sm:grid-cols-${Math.min(stats.length, 3)} md:grid-cols-${Math.min(stats.length, 4)} gap-6 justify-center`}>
-            {stats.map((stat, index) => (
-              <Card key={index} className="text-center">
-                <CardContent className="pt-6">
-                  <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+        <ClientAchievements />
 
         {/* Achievements Section */}
         <section className="mb-16">
@@ -147,18 +129,17 @@ export default function AchievementsPage() {
                     />
                   )}
                   {achievement.youtubeUrl && (
-  <div className="aspect-video mt-2">
-    <iframe
-      className="w-full h-full rounded-lg"
-      src={achievement.youtubeUrl}
-      title={achievement.title}
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
-  </div>
-)}
-
+                    <div className="aspect-video mt-2">
+                      <iframe
+                        className="w-full h-full rounded-lg"
+                        src={achievement.youtubeUrl}
+                        title={achievement.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -189,18 +170,17 @@ export default function AchievementsPage() {
                     />
                   )}
                   {hobby.youtubeUrl && (
-  <div className="aspect-video mt-2">
-    <iframe
-      className="w-full h-full rounded-lg"
-      src={hobby.youtubeUrl}
-      title={hobby.name}
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
-  </div>
-)}
-
+                    <div className="aspect-video mt-2">
+                      <iframe
+                        className="w-full h-full rounded-lg"
+                        src={hobby.youtubeUrl}
+                        title={hobby.name}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
