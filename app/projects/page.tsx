@@ -8,54 +8,53 @@ import { Badge } from "@/components/ui/badge"
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Yoga-Pose Detection App",
       description:
-        "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment processing, and admin dashboard.",
-      image: "/placeholder.svg?height=300&width=500",
-      technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind CSS"],
-      github: "https://github.com/johndoe/ecommerce",
-      demo: "https://ecommerce-demo.vercel.app",
-      date: "2023",
+        "A real-time web-based human pose detection and classification system using Flask, YOLOv8, MediaPipe BlazePose, and a Keras deep learning model.",
+      image: "/proj_1.jpeg?height=300&width=500",
+      technologies: ["Flask", "Python", "TensorFlow", "Keras", "YOLOv8 (Ultralytics)","MediaPipe BlazePose","OpenCV","HTML","MJPEG Stream","NumPy","OS Module"],
+      github: "https://github.com/Arubad/Yoga_pose_detection",
+      demo: "",
+      date: "2025",
     },
     {
-      title: "Task Management App",
-      description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/placeholder.svg?height=300&width=500",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
-      github: "https://github.com/johndoe/taskmanager",
+      title: "Spell Checker and automated suggestion system",
+      description:"A spell checker that suggests correct words by computing edit distance using the Wagner-Fischer algorithm for optimal string alignment.",
+      image: "/proj_2.jpeg?height=100&width=300",
+      technologies: ["Python", "Wagner-Fischer Algorithm", "Tkinter"],
+      github: "https://github.com/Arubad/Spell_checker_-Wagner-Fischer-",
       demo: "https://taskmanager-demo.vercel.app",
-      date: "2023",
+      date: "2025",
     },
     {
-      title: "Weather Dashboard",
+      title: "Solspot-Car",
       description:
-        "A responsive weather dashboard that displays current weather conditions and forecasts for multiple cities with beautiful visualizations.",
-      image: "/placeholder.svg?height=300&width=500",
-      technologies: ["Vue.js", "Chart.js", "OpenWeather API", "CSS3"],
-      github: "https://github.com/johndoe/weather-dashboard",
+        "A solar-powered smart vehicle prototype with 360° rotating wheels and ESP32-based wireless control for efficient parallel parking in tight urban spaces.",
+      image: "/proj_3.jpeg?height=300&width=500",
+      technologies: ["UBEC Module", "L298N Motor Driver", "ESPAsyncWebServer", "ESP32","ArduinoIDE"],
+      github: "https://github.com/Arubad/Solspot-Car?tab=readme-ov-file",
       demo: "https://weather-dashboard-demo.vercel.app",
-      date: "2022",
+      date: "2024",
     },
     {
-      title: "Social Media Analytics",
+      title: "Image Metadata and Face Recognition Toolkit",
       description:
-        "A comprehensive analytics platform for social media metrics with data visualization and automated reporting features.",
-      image: "/placeholder.svg?height=300&width=500",
-      technologies: ["Python", "Django", "D3.js", "PostgreSQL", "Redis"],
-      github: "https://github.com/johndoe/social-analytics",
+        "A Colab-based toolkit that combines DeepFace, Google Cloud Vision, and geolocation APIs to perform facial recognition, image metadata extraction, and GPS mapping from uploaded photos.",
+      image: "/proj_4.png?height=300&width=500",
+      technologies: ["Python", "Deep Face", "Google Colab", "Cloud Vision API", "ExifRead","Google Maps API","Firbase"],
+      github: "https://github.com/Arubad/Post-Disaster-management",
       demo: "https://social-analytics-demo.vercel.app",
-      date: "2022",
+      date: "2025",
     },
     {
-      title: "Cryptocurrency Tracker",
+      title: "Attendance monitoring system",
       description:
-        "Real-time cryptocurrency price tracking application with portfolio management and price alerts functionality.",
-      image: "/placeholder.svg?height=300&width=500",
-      technologies: ["React Native", "Firebase", "CoinGecko API", "Redux"],
-      github: "https://github.com/johndoe/crypto-tracker",
+        "A multithreaded C server with Python clients and a Tkinter dashboard that enables real-time, TCP-based attendance monitoring and CSV export for classrooms.",
+      image: "/proj_5.png?height=300&width=500",
+      technologies: ["Python", "Socket Programming", "GUI Dashboard", "gcc dev tools"],
+      github: "https://github.com/Arubad/Attendance_monitoring_sys",
       demo: "https://crypto-tracker-demo.vercel.app",
-      date: "2021",
+      date: "2025",
     },
     {
       title: "Blog CMS",
@@ -114,12 +113,12 @@ export default function ProjectsPage() {
                         Code
                       </Link>
                     </Button>
-                    <Button size="sm" asChild>
+                    {/*<Button size="sm" asChild>
                       <Link href={project.demo} target="_blank">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Demo
                       </Link>
-                    </Button>
+                    </Button>*/}
                   </div>
                 </div>
               </CardContent>
