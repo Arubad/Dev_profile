@@ -13,15 +13,7 @@ export default function AchievementsPage() {
       description: "Solved over 100 Problems on Leetcode",
       date: "2025",
       category: "Coding Platform",
-      image: "/leetcode.jpg",
-    },
-    {
-      icon: <Newspaper className="w-8 h-8" />,
-      title: "Time Series Forecasting Course – IIT Kharagpur",
-      description: "Course of Time Series Forecasting conducted by Analytics club of IIT-KGP",
-      date: "2025",
-      category: "Course",
-      image: "/ts-forecasting-certificate.png",
+      image: "/leetcode.png",
     },
     {
       icon: <ScrollText className="w-8 h-8" />,
@@ -30,6 +22,22 @@ export default function AchievementsPage() {
       date: "2024",
       category: "Certificate",
       image: "/iitm-certificate.png",
+    },
+    {
+      icon: <ScrollText className="w-8 h-8" />,
+      title: "Google solutions challenge 2025 Participant",
+      description: "Participated in the Google Solutions Challenge 2025 with a project focused on social impact",
+      date: "2025",
+      category: "Certificate",
+      image: "/Solutions_participationcert.jpg",
+    },
+    {
+      icon: <Newspaper className="w-8 h-8" />,
+      title: "Time Series Forecasting Course – IIT Kharagpur",
+      description: "Course of Time Series Forecasting conducted by Analytics club of IIT-KGP",
+      date: "2025",
+      category: "Course",
+      image: "/ts-forecasting-certificate.png",
     },
     {
       icon: <Book className="w-8 h-8" />,
@@ -74,11 +82,6 @@ export default function AchievementsPage() {
       name: "Reading",
       description: "Avid reader of sci-fi, technology, and personal development books",
       icon: "📚",
-    },
-    {
-      name: "Cooking",
-      description: "Passionate about international cuisine and experimenting with new recipes",
-      icon: "👨‍🍳",
     },
   ]
 

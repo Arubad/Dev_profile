@@ -8,6 +8,26 @@ import { Badge } from "@/components/ui/badge"
 export default function ProjectsPage() {
   const projects = [
     {
+      title: "Player Re-ID Pipeline",
+      description:
+        "I developed a modular, real-time cross-camera player re-identification system using YOLOv8 for detection, DeepSORT for tracking, MediaPipe for pose estimation, a custom multi-digit YOLO model for jersey number recognition, K-means clustering on LAB color features for team classification, and fused pretrained Vision Transformer (768D), CLIP (512D), and color (3D) embeddings via a weighted Hungarian algorithm to robustly match players across broadcast and tactical camera feeds in soccer, achieving high-confidence matches even under occlusion and lighting variation.",
+      image: "/proj_6.png?height=300&width=500",
+      technologies: ["Python", "YOLOv8", "DeepSORT", "MediaPipe", "OpenCV", "NumPy", "scikit-learn", "K-means", "LAB Color Space", "PyTorch", "TIMM (Vision Transformer)", "CLIP (OpenAI)", "TorchVision", "PIL", "SciPy", "Hungarian Algorithm", "pandas", "Matplotlib", "Seaborn", "Google Colab"],
+      github: "https://colab.research.google.com/drive/1JS7l_ZM0wWwJHcSNvQXza_4KfwiypVGR?usp=sharing",
+      demo: "https://social-analytics-demo.vercel.app",
+      date: "2025",
+    },
+    {
+      title: "Image Metadata and Face Recognition Toolkit",
+      description:
+        "A Colab-based toolkit that combines DeepFace, Google Cloud Vision, and geolocation APIs to perform facial recognition, image metadata extraction, and GPS mapping from uploaded photos.",
+      image: "/proj_4.png?height=300&width=500",
+      technologies: ["Python", "Deep Face", "Google Colab", "Cloud Vision API", "ExifRead","Google Maps API","Firebase"],
+      github: "https://github.com/Arubad/Post-Disaster-management",
+      demo: "https://social-analytics-demo.vercel.app",
+      date: "2025",
+    },
+    {
       title: "Yoga-Pose Detection App",
       description:
         "A real-time web-based human pose detection and classification system using Flask, YOLOv8, MediaPipe BlazePose, and a Keras deep learning model.",
@@ -37,16 +57,6 @@ export default function ProjectsPage() {
       date: "2024",
     },
     {
-      title: "Image Metadata and Face Recognition Toolkit",
-      description:
-        "A Colab-based toolkit that combines DeepFace, Google Cloud Vision, and geolocation APIs to perform facial recognition, image metadata extraction, and GPS mapping from uploaded photos.",
-      image: "/proj_4.png?height=300&width=500",
-      technologies: ["Python", "Deep Face", "Google Colab", "Cloud Vision API", "ExifRead","Google Maps API","Firbase"],
-      github: "https://github.com/Arubad/Post-Disaster-management",
-      demo: "https://social-analytics-demo.vercel.app",
-      date: "2025",
-    },
-    {
       title: "Attendance monitoring system",
       description:
         "A multithreaded C server with Python clients and a Tkinter dashboard that enables real-time, TCP-based attendance monitoring and CSV export for classrooms.",
@@ -55,16 +65,6 @@ export default function ProjectsPage() {
       github: "https://github.com/Arubad/Attendance_monitoring_sys",
       demo: "https://crypto-tracker-demo.vercel.app",
       date: "2025",
-    },
-    {
-      title: "Blog CMS",
-      description:
-        "A headless content management system for blogs with markdown support, SEO optimization, and multi-author capabilities.",
-      image: "/placeholder.svg?height=300&width=500",
-      technologies: ["Next.js", "Sanity", "GraphQL", "Vercel"],
-      github: "https://github.com/johndoe/blog-cms",
-      demo: "https://blog-cms-demo.vercel.app",
-      date: "2021",
     },
   ]
 

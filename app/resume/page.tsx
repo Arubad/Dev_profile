@@ -11,7 +11,7 @@ export default function ResumePage() {
       school: "IIT Madras",
       location: "Madras",
       year: "2024-ongoing",
-      gpa: "7.09",
+      gpa: "7.86",
     },
     {
       degree: "Bachelor of Technology in Information Technology",
