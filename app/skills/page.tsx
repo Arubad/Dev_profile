@@ -42,7 +42,7 @@ const skillCategories = [
     skills: [
       "React", "Next.js", "Node.js", "Express", "Django", "Flask",
       "TensorFlow", "Keras", "PyTorch", "OpenCV", "scikit-learn",
-      "MediaPipe", "YOLO", "Hugging Face"
+      "MediaPipe", "YOLO","Roboflow", "Hugging Face"
     ],
   },
   {

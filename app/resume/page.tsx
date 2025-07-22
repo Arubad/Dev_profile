@@ -81,7 +81,7 @@ export default function ResumePage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Resume</h1>
           <p className="text-xl text-muted-foreground mb-8">Download my complete resume or view the details below</p>
           <Button size="lg" asChild>
-            <a href="/resume.pdf" download>
+            <a href="/resume (2).pdf" download>
               <Download className="w-5 h-5 mr-2" />
               Download PDF Resume
             </a>

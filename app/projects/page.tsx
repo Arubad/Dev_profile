@@ -18,6 +18,15 @@ export default function ProjectsPage() {
       date: "2025",
     },
     {
+      title: "AI-Powered Mental Health Support Chatbot",
+    description: "A GPU-accelerated Colab and Streamlit toolkit that uses HuggingFace Transformers, sentence-transformers, and LangChain to deliver an AI chatbot for mental health support, featuring multimodal sentiment/emotion analysis, memory-augmented conversation, crisis detection, guided breathing, journaling, and motivational content.",
+  image: "/mentalhealthchatbot.jpeg?height=300&width=500",
+  technologies: ["Python","Google Colab","PyTorch","Transformers (HuggingFace)","sentence-transformers","LangChain","ChromaDB","Streamlit","VADER Sentiment","TextBlob","nltk","pandas","NumPy"],
+  github: "https://colab.research.google.com/drive/1W4Y1viRbzwSAjxB-svsMBXJIkkvh55RX?usp=sharing",
+  demo: "",
+  date: "2025"
+    },
+    {
       title: "Image Metadata and Face Recognition Toolkit",
       description:
         "A Colab-based toolkit that combines DeepFace, Google Cloud Vision, and geolocation APIs to perform facial recognition, image metadata extraction, and GPS mapping from uploaded photos.",
