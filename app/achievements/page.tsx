@@ -50,7 +50,19 @@ export default function AchievementsPage() {
     {
       icon: <Award className="w-8 h-8" />,
       title: "School Olympics Champion Boy",
-      description: "Prestigious award given to the outstanding performer in School Olympics",
+      description: (
+        <>
+          Prestigious award given to the outstanding performer in School Olympics.{" "}
+          <a
+            href="https://www.facebook.com/SakalSchoolympics/photos/champion-boy-arush-badhe-and-champion-girl-vaishnavi-more-were-felicitated-by-ra/1355136184627233/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            View on Facebook
+          </a>
+        </>
+      ),
       date: "2018",
       category: "Award",
       youtubeUrl: "https://www.youtube.com/embed/QtUKaFm8_gY",

@@ -18,7 +18,7 @@ export default function ResumePage() {
       school: "Vishwakarma Institute Of Technology",
       location: "Pune, Maharashtra",
       year: "2023-ongoing",
-      gpa: "8.44",
+      gpa: "8.51",
     },
   ]
 
