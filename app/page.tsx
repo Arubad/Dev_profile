@@ -16,13 +16,13 @@ export default function HomePage() {
 
   const achievements = [
     "IITM BS Data Science Foundation Comlpete",
-    "Leetcode 100+ problems solved",
+    /*"Leetcode 100+ problems solved",*/
     "Time Series Forecasting IITKGP participant",
     "School Olympics Champion boy 2018 award recepient",
     "Social Welfare Achievements",
   ]
 
-  const hobbies = ["Photography", "Swimming", "Badminton", "Reading", "Music"]
+  const hobbies = ["Photography", "Swimming", "Badminton", "Running", "Music","Movies"]
 
   return (
     <div className="relative min-h-screen overflow-hidden">

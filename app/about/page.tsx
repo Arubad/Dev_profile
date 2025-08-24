@@ -38,6 +38,12 @@ export default function AboutPage() {
 
   const timeline = [
     {
+      year: "2025",
+      title: "AI Intern",
+      company: "DatAIsm",
+      description: "AI Intern at the Medicare Solutions based solutions provider ",
+    },
+    {
       year: "2024",
       title: "Bachelor of Science in Data Sciences",
       company: "Indian Institute of Technology Madras",

@@ -7,14 +7,14 @@ import ClientAchievements from "@/components/ClientAchievementsWrapper"
 
 export default function AchievementsPage() {
   const achievements = [
-    {
+    /*{
       icon: <Trophy className="w-8 h-8" />,
       title: "Leetcode Programming Achievement",
       description: "Solved over 100 Problems on Leetcode",
       date: "2025",
       category: "Coding Platform",
       image: "/leetcode.png",
-    },
+    },*/
     {
       icon: <ScrollText className="w-8 h-8" />,
       title: "IITM BS Data Science Foundation",
@@ -88,12 +88,12 @@ export default function AchievementsPage() {
       name: "Badminton",
       description: "Frequent badminton player",
       icon: "🏸",
-      youtubeUrl: "https://www.youtube.com/embed/qpDOtooKG14",
+      youtubeUrl: "https://www.youtube.com/embed/J-cZYIokw_c",
     },
     {
-      name: "Reading",
-      description: "Avid reader of sci-fi, technology, and personal development books",
-      icon: "📚",
+      name: "Running",
+      description: "Like to Run 5 & 10km Marathons",
+      icon: "🏃",
     },
   ]
 
