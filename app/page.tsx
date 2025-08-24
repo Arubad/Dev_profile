@@ -80,7 +80,7 @@ export default function HomePage() {
       <div className="font-bold bg-background/80 backdrop-blur-md border border-border rounded-2xl shadow-lg max-w-3xl p-8">
         <h3 className="text-2xl font-semibold mb-6 text-primary">My Journey</h3>
         <p className="text-muted-foreground mb-6 leading-relaxed">
-          I’m an aspiring AI & Machine Learning engineer currently in my second year, pursuing a dual degree — BS in Data Sciences and Engineering at IIT Madras and BTech in Information Technology at VIT Pune. My passion lies at the intersection of Computer Vision and Object Detection, where I enjoy solving complex real-world problems by teaching machines to see and understand the world.
+          I’m an aspiring AI & Machine Learning engineer currently in my third year, pursuing a dual degree — BS in Data Sciences and Engineering at IIT Madras and BTech in Information Technology at VIT Pune. My passion lies at the intersection of Computer Vision and Object Detection, where I enjoy solving complex real-world problems by teaching machines to see and understand the world.
         </p>
         <p className="text-muted-foreground mb-6 leading-relaxed">
           My academic journey has been driven by curiosity and hands-on projects involving deep learning frameworks, image processing, and neural networks. I’m continually exploring the latest advancements in AI, eager to deepen my expertise in convolutional neural networks (CNNs), transformers, and real-time object detection algorithms.
