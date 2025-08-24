@@ -149,6 +149,27 @@ export default function ResumePage() {
 
   const certifications = [
     {
+      name: "Introduction to Agile Development and Scrum",
+      issuer: "IBM",
+      year: "2025",
+      id: "",
+      image: "/ongoing.jpeg",
+    },
+    {
+      name: "Supply Chain Management Specialization",
+      issuer: "Rutgers",
+      year: "2025",
+      id: "",
+      image: "/ongoing.jpeg",
+    },
+    {
+      name: "IBM DevOps and Software Engineering Professional Certificate",
+      issuer: "IBM",
+      year: "2025",
+      id: "",
+      image: "/ongoing.jpeg",
+    },
+    {
       name: "Generative Adversarial Networks Specialization",
       issuer: "Deeplearning.AI",
       year: "2025",

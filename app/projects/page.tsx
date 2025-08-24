@@ -8,23 +8,26 @@ import { Badge } from "@/components/ui/badge"
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "Player Re-ID Pipeline",
+      title: "WhatsApp Chatbot for Rosewood Enterprises",
       description:
-        "I developed a modular, real-time cross-camera player re-identification system using YOLOv8 for detection, DeepSORT for tracking, MediaPipe for pose estimation, a custom multi-digit YOLO model for jersey number recognition, K-means clustering on LAB color features for team classification, and fused pretrained Vision Transformer (768D), CLIP (512D), and color (3D) embeddings via a weighted Hungarian algorithm to robustly match players across broadcast and tactical camera feeds in soccer, achieving high-confidence matches even under occlusion and lighting variation.",
-      image: "/proj_6.png?height=300&width=500",
-      technologies: ["Python", "YOLOv8", "DeepSORT", "MediaPipe", "OpenCV", "NumPy", "scikit-learn", "K-means", "LAB Color Space", "PyTorch", "TIMM (Vision Transformer)", "CLIP (OpenAI)", "TorchVision", "PIL", "SciPy", "Hungarian Algorithm", "pandas", "Matplotlib", "Seaborn", "Google Colab"],
-      github: "https://colab.research.google.com/drive/1JS7l_ZM0wWwJHcSNvQXza_4KfwiypVGR?usp=sharing",
-      demo: "https://social-analytics-demo.vercel.app",
-      date: "2025",
-    },
-    {
-      title: "AI-Powered Mental Health Support Chatbot",
-    description: "A GPU-accelerated Colab and Streamlit toolkit that uses HuggingFace Transformers, sentence-transformers, and LangChain to deliver an AI chatbot for mental health support, featuring multimodal sentiment/emotion analysis, memory-augmented conversation, crisis detection, guided breathing, journaling, and motivational content.",
-  image: "/mentalhealthchatbot.jpeg?height=300&width=500",
-  technologies: ["Python","Google Colab","PyTorch","Transformers (HuggingFace)","sentence-transformers","LangChain","ChromaDB","Streamlit","VADER Sentiment","TextBlob","nltk","pandas","NumPy"],
-  github: "https://colab.research.google.com/drive/1W4Y1viRbzwSAjxB-svsMBXJIkkvh55RX?usp=sharing",
-  demo: "",
-  date: "2025"
+        "As an industry-grade project for Rosewood Enterprises, my group is developing a WhatsApp chatbot using the **Meta Business API** to deliver real-time product information, manage FAQs, and provide 24/7 customer support. The system features a multi-language interface (English, Hindi, Spanish) and integrates with the company's Inventory, CRM, and Ticketing systems via APIs for seamless transactional support and query escalation. The chatbot is designed to achieve an automated resolution rate of at least 80% while handling up to 10,000 concurrent chats.",
+      image: "/indus_spons.jpeg",
+      technologies: [
+        "Python",
+        "Meta Business API",
+        "Natural Language Processing (NLP)",
+        "Flask",
+        "APIs/REST",
+        "SQL",
+        "PostgreSQL",
+        "Ticketing System API",
+        "Inventory Management System API",
+        "CRM API",
+        "Git",
+      ],
+      github: "https://github.com/your-project-repo",
+      demo: "https://your-project-demo.com",
+      date: "August 2025 - Ongoing",
     },
     {
       title: "Image Metadata and Face Recognition Toolkit",

@@ -4,9 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import CountUp from "react-countup"
 
 const stats = [
-  { label: "Projects Completed", value: 10, suffix: "+" },
-  { label: "Leetcode Problems", value: 100, suffix: "+" },
-  { label: "Articles Published", value: 2, suffix: "" },
+  { label: "Projects Completed", value: 6, suffix: "+" },
+  { label: "Leetcode Problems", value: 36, suffix: "+" },
+  { label: "Articles Published", value: 0, suffix: "" },
 ]
 
 export default function ClientAchievements() {

@@ -41,7 +41,7 @@ export default function AboutPage() {
       year: "2025",
       title: "AI Intern",
       company: "DatAIsm",
-      description: "AI Intern at the Medicare Solutions based solutions provider ",
+      description: "AI Intern at the AI Medicare Solutions provider ",
     },
     {
       year: "2024",

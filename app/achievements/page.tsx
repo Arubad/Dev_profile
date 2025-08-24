@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic"
-import { ScrollText, Book, Trophy, Award, Star, Users, BookOpen, Mic, Newspaper } from "lucide-react"
+import { ScrollText, Book, Trophy, Award, Star, Users, BookOpen, Mic, Newspaper,Sparkles,FileText,Briefcase } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
@@ -14,6 +14,30 @@ export default function AchievementsPage() {
       date: "2025",
       category: "Coding Platform",
       image: "/leetcode.png",
+    },*/
+    {
+      icon: <Sparkles className="w-8 h-8" />,
+      title: "AI/ML and Data Science Lead",
+      description: "Led the Gedit Coding Club, focusing on mentorship and project-based learning in AI, machine learning, and data science. Organized workshops and guided members in developing practical skills.",
+      date: "2024 - present",
+      category: "Leadership",
+      image: "/club.jpeg",
+    },
+    {
+      icon: <Briefcase className="w-8 h-8" />,
+      title: "WhatsApp Chatbot Project for Rosewood Enterprises",
+      description: "Developing an industry-grade WhatsApp chatbot for Rosewood Enterprises to provide real-time product information, stock updates, and 24/7 customer support. The project was built using the Meta Business API and incorporated multi-language support (English, Hindi, Spanish) and an escalation flow to a live agent.",
+      date: "August 2025 - Ongoing",
+      category: "Industry Project",
+      image: "/indus_spons.jpeg",
+    },
+    /*{
+      icon: <FileText className="w-8 h-8" />,
+      title: "Paper Publication at ICIVC",
+      description: "Authored a research paper accepted and published in the proceedings of the International Conference on Intelligent Vision and Computing (ICIVC), focusing on novel contributions in intelligent systems and data analytics. This publication is indexed in Scopus and other major databases.",
+      date: "2024", // or the specific year of publication
+      category: "Publication",
+      image: "/icivc-paper.png", // Placeholder for a related image or a snippet of the paper
     },*/
     {
       icon: <ScrollText className="w-8 h-8" />,
@@ -82,7 +106,7 @@ export default function AchievementsPage() {
       name: "Swimming",
       description: "Swam in multiple state and national-level tournaments",
       icon: "🏊",
-      youtubeUrl: "https://www.youtube.com/embed/kEXSV9y9MNc",
+      youtubeUrl: "https://www.youtube.com/embed/naA0TolwnbQ",
     },
     {
       name: "Badminton",
