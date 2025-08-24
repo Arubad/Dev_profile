@@ -9,8 +9,8 @@ import { ParticlesBackground } from "@/components/ParticlesBackground"
 
 export default function HomePage() {
   const skills = {
-    languages: ["JavaScript", "Python", "HTML", "SQL", "C++", "C", "Java"],
-    frameworks: ["React", "Next.js", "Node.js", "Express", "Django", "Flask", "TensorFlow", "Keras", "PyTorch", "OpenCV", "scikit-learn", "MediaPipe", "YOLO", "Hugging Face"],
+    languages: [/*"JavaScript"*/, "Python", "HTML", "SQL", "C++", "C", "Java"],
+    frameworks: [/*"React", "Next.js", "Node.js", "Express", "Django", "Flask",*/ "TensorFlow", "Keras", "PyTorch", "OpenCV", "scikit-learn", "MediaPipe", "YOLO", "Hugging Face"],
     tools: ["Git", "Docker", "GCP", "Firebase", "MongoDB", "PostgreSQL", "Pandas", "NumPy", "Matplotlib","Seaborn","Google Colab"],
   }
 

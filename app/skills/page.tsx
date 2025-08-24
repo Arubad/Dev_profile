@@ -20,17 +20,17 @@ import {
 const skillCategories = [{
   id: "languages",
   name: "Languages",
-  skills: ["JavaScript", "Python", "HTML", "SQL", "C++", "C", "Java"],
+  skills: [/*"JavaScript",*/ "Python", "HTML", "SQL", "C++", "C", "Java"],
 }, {
   id: "frameworks",
   name: "Frameworks & Libraries",
   skills: [
-    "React",
+    /*"React",
     "Next.js",
     "Node.js",
     "Express",
     "Django",
-    "Flask",
+    "Flask",*/
     "TensorFlow",
     "Keras",
     "PyTorch",
@@ -46,7 +46,7 @@ const skillCategories = [{
   name: "Tools & Platforms",
   skills: [
     "Git",
-    "Docker",
+    /*"Docker",*/
     "GCP",
     "Firebase",
     "MongoDB",
